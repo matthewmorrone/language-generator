@@ -1,0 +1,157 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>z-distribution</title>
+<script>
+function doCalc()
+{
+	form=document.forms[0];
+	a=form.left.value;b=form.right.value;mean=form.mean.value;sd=form.sd.value;
+
+	if(a=="-inf"){a="-99"}
+	if(a=="+inf"){a="+99"}
+	if(b=="-inf"){b="-99"}
+	if(b=="+inf"){b="+99"}
+
+	if(check(a)==1 || check(b)==1 || check(mean)==1 || check(sd)==1)
+	{
+		form.res.value="Check that input."
+		return
+	}
+
+	a=1*a
+	b=1*b
+	mean=1*mean
+	sd=1*sd
+	if(sd==0)
+	{
+		if(a==mean && b==mean)
+		{
+			form.res.value="1.0000000000";
+			return;
+		}
+		else
+		{
+			form.res.value="0.0000000000";
+			return;
+		}
+	}
+
+	a=(a-mean)/sd; b=(b-mean)/sd;
+
+	sum=doLeft(b)-doLeft(a);
+
+	txt=format(sum);
+
+	form.res.value=txt;
+
+}
+function check(n)
+{
+	np=0;e=0;l=n.length;
+	for(r=0;r<l;r++)
+	{
+		c=n.substring(r,r+1);
+		if(c<"0" || c>"9")
+		{
+			e2=1;
+			if(c=="." && np==0){np++;e2=0;}
+			if((c=="+" || c=="-")&& r==0 && l>1){e2=0}
+				e=e | e2;
+		}
+	}
+	if(n=="-." || n=="+.") return 1;
+	return e;
+}
+
+function clr()
+{
+	f=document.forms[0];
+	f.res.value="";
+}
+
+function format(num)
+{
+	if(""+num=="NaN"){return "Check that input."}
+		txt="";
+	if(num<0){txt+="-"; num*=-1}
+	for(n=0; n<11; n++)
+	{
+		dig=Math.floor(num);
+		num=(num-dig)*10;
+		txt+=dig;
+		if(n==0)txt+=".";
+	}
+	return txt;
+}
+
+function doLeft(z)
+{
+	if(z<-6.5) return 0;
+	if(z>6.5) return 1;
+
+	factK=1;
+	sum=0;
+	itts=0;term=1;k=0;
+	while(Math.abs(term)>Math.exp(-23))
+	{
+		term=.3989422804*Math.pow(-1,k)*Math.pow(z,k)/(2*k+1)/Math.pow(2,k)*Math.pow(z,k+1)/factK;
+		sum+=term;
+		k++;
+		factK*=k;
+
+	}
+	sum+=1/2;//alert(sum)
+	if(sum<.0000000001) sum=0;
+
+	return sum;
+
+}
+
+</script>
+
+</head>
+<body>
+
+
+	<p><font color="#800000"><b>Java Normal Probability Calculator</b></font> </p>
+	<p><i>(required JavaScript)</i><br></p>
+	<p>To find the area <font color="#ff0000"><b>P</b></font> </p>
+	<p>under the normal probability curve N(mean, standard_deviation) </p>
+	<p>within the interval (left, right), </p>
+	<p>type in the 4 parameters and press "Calculate". </p>
+	<p><i>The standard normal curve N(0,1) has a mean=0 and s.d.=1.</i></p>
+
+
+
+
+	<p>Use <font color="#ff0000">-inf</font> and <font color="#ff0000">+inf</font> for infinite limits.</p>
+
+
+
+	<form name="inp">
+		<table>
+			<tr>
+				<td>left bound</td>
+				<td>right bound</td>
+				<td>mean</td>
+				<td>standard deviation</td>
+			</tr>
+			<tr>
+				<td><input type="text" name="left" value="-inf" onmousedown="clr()"></td>
+				<td><input type="text" name="right" value="0" onmousedown="clr()"></td>
+				<td><input type="text" name="mean" value="0" onmousedown="clr()"></td>
+				<td><input type="text" name="sd" value="1" onmousedown="clr()"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="calculate" onclick="doCalc()"></td>
+				<td colspan="3"><input type="text" name="res" value=""></td>
+			</tr>
+		</table>
+	</form>
+
+</div>
+
+
+</body>
+</html>

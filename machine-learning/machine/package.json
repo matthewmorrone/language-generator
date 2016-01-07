@@ -1,0 +1,85 @@
+{
+  "name": "machinejs",
+  "version": "0.9.0",
+  "description": "Automated machine learning structure. Ensembles random forests, XGBoost, neural networks, AdaBoost, KNN, SVM together, handling data formatting ensembling, and running predictions for you. Feel free to tweak the settings if you want a lot of control, or just start it up and let it run if you're looking for a push-button MVP solution.",
+  "main": "machineJS.js",
+  "scripts": {
+    "test": "npm run test:regression",
+    "test:regression": "mocha test/regression/test.js",
+    "test:categorical": "mocha test/categorical/test.js",
+    "dev": "node machineJS.js data/rossman/short/rossShortTrainDev.csv --predict data/rossman/short/test.csv --join data/rossman/short/store.csv --alreadyFormatted --dev",
+    "devEnsemble": "node machineJS.js data/rossman/rossShortTrainDev.csv --predict data/rossman/test.csv --join data/rossman/store.csv --alreadyFormatted --devEnsemble",
+    "train:rossman": "node machineJS.js data/rossman/tran_filled_gap.csv --predict data/rossman/test.csv --join data/rossman/store.csv --alreadyFormatted",
+    "train:rossShort": "node machineJS.js data/rossman/short/rossShortTrainDev.csv --predict data/rossman/short/test.csv --join store.csv",
+    "train:numeraiDev": "node machineJS.js data/numerai/numerai_training_data.csv --predict data/numerai/numerai_test_data.csv --binaryOutput --alreadyFormatted",
+    "train:numerai": "node machineJS.js data/numerai/numerai_training_data_tournament.csv --predict data/numerai/numerai_tournament_data.csv --alreadyFormatted",
+    "ensemble:rossShort": "node machineJS.js data/rossman/short/rossShortTrainDev.csv --predict data/rossman/short/test.csv --join data/rossman/store.csv --alreadyFormatted --devEnsemble",
+    "ensemble:numerai": "node machineJS.js data/numerai/numerai_training_data_tournament.csv --predict data/numerai/numerai_tournament_data.csv --alreadyFormatted --devEnsemble",
+    "train:giveCredit": "node machineJS.js data/giveCredit/train.csv --predict data/giveCredit/test.csv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ClimbsRocks/machinejs.git"
+  },
+  "keywords": [
+    "neuralNet",
+    "neural network",
+    "machine learning",
+    "ml",
+    "algorithms",
+    "random forest",
+    "svm",
+    "naive bayes",
+    "bagging",
+    "optimization",
+    "data science",
+    "brainjs",
+    "date night",
+    "scikit-learn",
+    "sklearn",
+    "ensemble",
+    "data formatting",
+    "javascript",
+    "js",
+    "XGBoost",
+    "scikit-neuralnetwork",
+    "KNN",
+    "K nearest neighbors",
+    "GridSearch",
+    "GridSearchCV",
+    "grid search",
+    "python",
+    "RandomizedSearchCV",
+    "preprocessing",
+    "data-formatter",
+    "SVM",
+    "kaggle",
+    "kaggle competition"
+  ],
+  "author": "Preston Parry",
+  "license": "MIT",
+  "bin": {
+    "machineJS": "machineJS.js"
+  },
+  "bugs": {
+    "url": "https://github.com/ClimbsRocks/machineJS/issues"
+  },
+  "homepage": "https://github.com/ClimbsRocks/machineJS",
+  "dependencies": {
+    "babyparse": "^0.4.3",
+    "data-formatter": "^1.5.1",
+    "ensembler": "^0.5.7",
+    "fast-csv": "^0.6.0",
+    "longjohn": "^0.2.9",
+    "minimist": "^1.1.2",
+    "mkdirp": "^0.5.1",
+    "python-shell": "^0.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "csv": "^0.4.6",
+    "data-for-tests": "0.0.3",
+    "mocha": "^2.3.3",
+    "rimraf": "^2.4.3"
+  }
+}

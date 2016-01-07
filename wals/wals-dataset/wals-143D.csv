@@ -1,0 +1,7 @@
+ID,Language_ID,Parameter_ID,Contribution_ID,Value,Source,Comment
+143D-gnb,http://wals.info/languoid/lect/wals_code_gnb,143D,143,(Neg)[Neg-V-Neg],"Harris-1969b[ 4, 12-13, 35-37]",
+143D-tbl,http://wals.info/languoid/lect/wals_code_tbl,143D,143,[V-Neg]Neg&OptNegInfix or Pref,Abisay-et-al-1983[ 13],
+143D-non,http://wals.info/languoid/lect/wals_code_non,143D,143,NegVNeg/NegNegVNeg,"Hyman-1981b[ 57-62, 71-72]",
+143D-doy,http://wals.info/languoid/lect/wals_code_doy,143D,143,Neg[V-Neg]/NegVNeg&NegTone,"Wiering-and-Wiering-1994[ 56, 80-81]",
+143D-kon,http://wals.info/languoid/lect/wals_code_kon,143D,143,Neg[V(-Neg)]Neg/[Neg-V(-Neg)]Neg,"Lumwamu-1973[ 213];Bentley-1887[ 607, 648]",
+143D-kwt,http://wals.info/languoid/lect/wals_code_kwt,143D,143,Neg[V-(Neg)](Neg),"Spencer-2008[ 107, 124, 131, 132, 150]",

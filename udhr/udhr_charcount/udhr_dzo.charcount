@@ -1,0 +1,28 @@
+0F0B                    	     25   	TIBETAN MARK INTERSYLLABIC TSHEG
+0F0D                    	      1   	TIBETAN MARK SHAD
+0F42                    	      8   	TIBETAN LETTER GA
+0F42, 0F72              	      2   	TIBETAN LETTER GA, TIBETAN VOWEL SIGN I
+0F42, 0F7C              	      1   	TIBETAN LETTER GA, TIBETAN VOWEL SIGN O
+0F42, 0FB2, 0F7C        	      1   	TIBETAN LETTER GA, TIBETAN SUBJOINED LETTER RA, TIBETAN VOWEL SIGN O
+0F44                    	      1   	TIBETAN LETTER NGA
+0F45, 0F72              	      2   	TIBETAN LETTER CA, TIBETAN VOWEL SIGN I
+0F46                    	      2   	TIBETAN LETTER CHA
+0F4F                    	      1   	TIBETAN LETTER TA
+0F51                    	      4   	TIBETAN LETTER DA
+0F51, 0FB2              	      1   	TIBETAN LETTER DA, TIBETAN SUBJOINED LETTER RA
+0F53                    	      2   	TIBETAN LETTER NA
+0F56                    	      4   	TIBETAN LETTER BA
+0F58                    	      3   	TIBETAN LETTER MA
+0F58, 0F72              	      1   	TIBETAN LETTER MA, TIBETAN VOWEL SIGN I
+0F5A, 0F72              	      1   	TIBETAN LETTER TSHA, TIBETAN VOWEL SIGN I
+0F5D                    	      1   	TIBETAN LETTER WA
+0F60                    	      3   	TIBETAN LETTER -A
+0F60, 0F72              	      1   	TIBETAN LETTER -A, TIBETAN VOWEL SIGN I
+0F62                    	      2   	TIBETAN LETTER RA
+0F62, 0F72              	      1   	TIBETAN LETTER RA, TIBETAN VOWEL SIGN I
+0F63                    	      1   	TIBETAN LETTER LA
+0F63, 0F74              	      1   	TIBETAN LETTER LA, TIBETAN VOWEL SIGN U
+0F66                    	      4   	TIBETAN LETTER SA
+0F66, 0F92, 0FB1, 0F7A  	      1   	TIBETAN LETTER SA, TIBETAN SUBJOINED LETTER GA, TIBETAN SUBJOINED LETTER YA, TIBETAN VOWEL SIGN E
+0F66, 0F9F              	      1   	TIBETAN LETTER SA, TIBETAN SUBJOINED LETTER TA
+0F66, 0FA4, 0F74        	      1   	TIBETAN LETTER SA, TIBETAN SUBJOINED LETTER PA, TIBETAN VOWEL SIGN U
