@@ -1,0 +1,63 @@
+{
+  "name": "canvas",
+  "description": "Canvas graphics API backed by Cairo",
+  "version": "1.0.1",
+  "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@learnboost.com"
+  },
+  "keywords": [
+    "canvas",
+    "graphic",
+    "graphics",
+    "pixman",
+    "cairo",
+    "image",
+    "images",
+    "pdf"
+  ],
+  "homepage": "https://github.com/learnboost/node-canvas",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/learnboost/node-canvas.git"
+  },
+  "scripts": {
+    "test": "make test",
+    "install": "node-gyp rebuild"
+  },
+  "devDependencies": {
+    "express": "3.0",
+    "jade": "0.28.1",
+    "mocha": "*",
+    "should": "*"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "main": "./lib/canvas.js",
+  "gypfile": true,
+  "_id": "canvas@1.0.1",
+  "dist": {
+    "shasum": "9dcf2acefb6b0d18e014cd2b67327ee9187e7bf2",
+    "tarball": "http://registry.npmjs.org/canvas/-/canvas-1.0.1.tgz"
+  },
+  "_from": "canvas@1.0.1",
+  "_npmVersion": "1.2.2",
+  "_npmUser": {
+    "name": "tjholowaychuk",
+    "email": "tj@vision-media.ca"
+  },
+  "maintainers": [
+    {
+      "name": "tjholowaychuk",
+      "email": "tj@vision-media.ca"
+    }
+  ],
+  "directories": {},
+  "_shasum": "9dcf2acefb6b0d18e014cd2b67327ee9187e7bf2",
+  "_resolved": "https://registry.npmjs.org/canvas/-/canvas-1.0.1.tgz",
+  "bugs": {
+    "url": "https://github.com/learnboost/node-canvas/issues"
+  },
+  "readme": "ERROR: No README data found!"
+}

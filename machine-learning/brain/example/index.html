@@ -1,0 +1,72 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="blackorwhite.css">
+	<script src="jquery-1.4.2.min.js"></script>
+	<script src="brain-0.6.3.js"></script>
+	<script src="blackorwhite.js"></script>
+	<title>brain.js demo: Train a neural network to recognize color contrast</title>
+</head>
+<body>
+	<div id="desc">brain.js demo - train a neural network to recognize color contrast</div>
+	<div id="container">
+		<div class="section" id="training-box">
+			<div class="section-header"> Which one can you read more easily? </div>
+			<div id="swatches">
+				<div class="swatch-box">
+					<div id="black-swatch" class="swatch" onclick="trainer.pickSwatch(&#39;black&#39;);" style="background-color: rgb(61, 198, 213);">
+						<div class="swatch-text">This one</div>
+					</div>
+				</div>
+				<div class="swatch-box">
+					<div id="white-swatch" class="swatch" onclick="trainer.pickSwatch(&#39;white&#39;);" style="background-color: rgb(61, 198, 213);">
+						<div class="swatch-text">This one</div>
+					</div>
+				</div>
+			</div>
+			<div id="training-buttons"> <span class="pass-button button" onclick="trainer.changeColor();" title="skip">→</span> </div>
+			<div id="test-box" style="display: none;">
+				<div id="test-button" onclick="trainer.trainNetwork();" class="button">train neural network</div>
+				<div id="subtitle"> You can train the network at any point, but the more color selections you give it, the better. </div>
+			</div>
+		</div>
+		<div id="progress-box" style="display: none;">
+			<div id="training-message"> training network... </div>
+			<div id="progress-bar">
+				<div id="progress-completed"> </div>
+			</div>
+		</div>
+		<div class="section" id="testing-box" style="display: none;">
+			<div id="swatches">
+				<div id="nn-swatch-box" class="swatch-box">
+					<div id="nn-swatch" class="swatch" onclick="tester.viewCode(&#39;nn&#39;);" title="view neural network code" style="background-color: rgb(61, 198, 213);">
+						<div class="swatch-text">your neural network</div>
+					</div>
+					<div class="view-code" onclick="tester.viewCode(&#39;nn&#39;);">code
+						<div class="view-code-arrow">▶</div>
+					</div>
+				</div>
+				<div id="wcag-swatch-box" class="swatch-box" style="display: none;">
+					<div id="wcag-swatch" class="swatch" onclick="tester.viewCode(&#39;wcag&#39;);" title="view luminosity code" style="background-color: rgb(61, 198, 213);">
+						<div class="swatch-text">luminosity algorithm</div>
+					</div>
+					<div class="view-code" onclick="tester.viewCode(&#39;wcag&#39;)">code
+						<div class="view-code-arrow">▶</div>
+					</div>
+				</div>
+				<div id="yiq-swatch-box" class="swatch-box">
+					<div id="yiq-swatch" class="swatch" onclick="tester.viewCode(&#39;yiq&#39;);" title="view yiq code" style="background-color: rgb(61, 198, 213);">
+						<div class="swatch-text">YIQ formula</div>
+					</div>
+					<div class="view-code" onclick="tester.viewCode(&#39;yiq&#39;)">code
+						<div class="view-code-arrow">▶</div>
+					</div>
+				</div>
+			</div>
+			<div id="training-buttons"> <span class="pass-button button" onclick="tester.testRandom();" title="next color">→</span> </div>
+		</div>
+		<div id="code-box" style="display: none;"> <pre id="code"></pre> </div>
+	</div>
+</body>
+
+</html>

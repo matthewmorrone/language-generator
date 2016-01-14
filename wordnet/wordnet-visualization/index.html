@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WordNet visualization</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41408481-7', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=907082569344359&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <div class="description">
+      An interactive visualization of the Princeton <a href="http://wordnet.princeton.edu">WordNet</a> database.<br>
+      <br>
+      Explore a word's disambiguation by using the box in the middle or by clicking on shown words. Mouse over to see glossary and synonyms.<br>
+      <br>
+      Words are color coded according to parts of speech:<br>
+      <div class="legend a">adjective</div>
+      <div class="legend n">noun</div>
+      <div class="legend v">verb</div>
+      <div class="legend r">adverb</div>
+    </div>
+    <div class="container">
+      <input class="source" type="text" placeholder="Word to search for..." autofocus>
+    </div>
+    <div class="footer">
+      <a href="https://github.com/mateogianolio/wordnet-visualization">View source.</a><br>
+      <br>
+      <div class="fb-like" data-href="http://mateogianolio.github.io/wordnet-visualization/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="mateogianolio">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+  </body>
+</html>

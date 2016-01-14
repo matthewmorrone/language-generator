@@ -1,0 +1,176 @@
+* {
+  font: 100%/1.5 'Droid Serif', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+br { margin: 0; padding: 0 }
+
+a {
+  padding: .1em 0;
+  color: #BDBDBD;
+  text-decoration: none;
+  border-bottom: 1px solid #E0E0E0;
+  transition: color .2s, border-color .2s;
+}
+
+a:hover {
+  color: #000000;
+  border-bottom: 1px solid #000000;
+}
+
+input {
+  outline: 0;
+  padding: 0;
+}
+
+::-webkit-input-placeholder { color: #BDBDBD }
+:-moz-placeholder { color: #BDBDBD; opacity: 1 }
+::-moz-placeholder { color: #BDBDBD; opacity: 1 }
+:-ms-input-placeholder { color: #BDBDBD }
+
+.container {
+  padding: 0;
+  position: relative;
+  width: 960px;
+  height: 600px;
+  margin: 5em auto;
+  overflow: visible;
+}
+
+.description, .footer {
+  width: 600px;
+  margin: 2em auto;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.legend {
+  display: inline-block;
+  padding: .1em .5em;
+  margin: .5em .5em 0 0;
+  background: #F5F5F5;
+  border-radius: 0 .25em 0 0;
+  border-left: .5em solid transparent;
+}
+
+.source, .node {
+  text-align: center;
+  padding: .1em .5em;
+  font-size: 1rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.source {
+  width: 250px;
+  height: 40px;
+  position: absolute;
+  border: none;
+  font-size: 1.25rem;
+  background: #F5F5F5;
+  color: #000000;
+  transition: background .4s;
+  z-index: 999;
+}
+
+.node {
+  border-left: .5em solid transparent;
+  background: #F5F5F5;
+  white-space: nowrap;
+  transition: background-color .2s, color .2s, -webkit-transform .2s;
+}
+
+.node:hover {
+  background: #212121;
+  color: #fff;
+  z-index: 999;
+  cursor: pointer;
+  -webkit-transform: scale(1.4, 1.4) !important;
+  -ms-transform: scale(1.4, 1.4) !important;
+  transform: scale(1.4, 1.4) !important;
+}
+
+.node.left:hover .glossary {
+  display: block !important;
+  position: absolute;
+  left: 0;
+  padding: .25em .75em;
+  text-align: left;
+  font-size: .75rem;
+  background: #212121;
+}
+
+.node.right:hover .glossary {
+  display: block !important;
+  position: absolute;
+  right: 0;
+  padding: .25em .75em;
+  text-align: right;
+  font-size: .75rem;
+  background: #212121;
+}
+
+.node.left .synonym {
+  left: 0;
+  text-align: left;
+}
+
+.node.right .synonym {
+  right: 0;
+  text-align: right;
+}
+
+.synonym {
+  display: none;
+}
+
+.node:hover .synonym {
+  display: inline-block;
+  padding: .25em .75em;
+  color: #212121;
+  font-size: .75rem;
+  transition: background-color .2s, color .2s;
+  border: none;
+}
+
+.node:hover .synonym:hover {
+  color: #FFFFFF;
+  background: #000000;
+}
+
+.rotate {
+  -webkit-animation: rotate .5s linear infinite;
+  -moz-animation: rotate .5s linear infinite;
+  animation: rotate .5s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(0deg) }
+  to { -webkit-transform: rotate(360deg) }
+}
+
+@-moz-keyframes rotate {
+  from { -moz-transform: rotate(0deg) }
+  to { -moz-transform: rotate(360deg) }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.a { border-color: #FFEB3B } /* adjective */
+.n { border-color: #29B6F6 } /* noun */
+.s { border-color: #FFEB3B } /* adjective */
+.v { border-color: #8BC34A } /* verb */
+.r { border-color: #26A69A } /* adverb */
+
+.synonym.a { background: #FFEB3B }
+.synonym.n { background: #29B6F6 }
+.synonym.s { background: #FFEB3B }
+.synonym.v { background: #8BC34A }
+.synonym.r { background: #26A69A }
